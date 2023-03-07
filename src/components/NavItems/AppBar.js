@@ -219,8 +219,8 @@ const cartCount=products.length
           
 
           
-          <Box sx={{border:'1px solid white',display:{md:'none'}}}>
-             <input type="text" name="" value={input} onChange={(e)=>setinput(e.target.value)} style={{padding:'10px',backgroundColor:"",borderRadius:'0px'}}/>
+          <Box sx={{border:'1px solid white',display:{md:'none',sm:'flex',xs:'flex'},justifyContent:'center',flexWrap:'nowrap',width:'100%'}}>
+             <input type="text" name="" value={input} onChange={(e)=>setinput(e.target.value)} style={{padding:'10px',backgroundColor:"",borderRadius:'0px',width:'70%',flexShrink:1}}/>
              <Button type="" onClick={()=>submit(input)} variant=''>
               
            <SearchIcon/>
