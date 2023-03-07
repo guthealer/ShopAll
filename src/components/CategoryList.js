@@ -31,16 +31,17 @@ function CategoryList(props) {
     
     return (
         <div>
+              
             <Grid container maxWidth='sm' sx={{backgroundColor:'white',display:{xs:'sm'}}} spacing={1}>
                 {
                     ListItems.map((item)=>( <Grid item md={4} >
-                        <NavLink to={item} state={{cateName:{item}}}>
+                        <NavLink to={`/${item}`} state={{cateName:{item}}}>
                            <Button> {item}</Button>
                             </NavLink>
                     </Grid>))
                 }
                 <Grid item >
-                    <NavLink></NavLink>
+               
                 </Grid>
             </Grid>
         </div>

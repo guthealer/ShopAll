@@ -132,7 +132,7 @@ const cartCount=products.length
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText>
              
-              <NavLink to='CategoryList' >
+              <NavLink to='/CategoryList' >
               <Button sx={{ color: '' }}>
              category
               </Button>
@@ -199,7 +199,7 @@ const cartCount=products.length
 
               <ToolTip/>
             
-              <Box sx={{border:'1px solid white'}}>
+              <Box sx={{border:'1px solid white',display:{sm:'block'}}}>
              <input type="text" name="" value={input} onChange={(e)=>setinput(e.target.value)} style={{padding:'10px',backgroundColor:"",borderRadius:'0px'}}/>
              <Button type="" onClick={()=>submit(input)} variant=''>
               
@@ -216,13 +216,18 @@ const cartCount=products.length
           
           </Box>
 
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'block', sm: 'none' } }}
-          >
-            ShopAll
-          </Typography>
+          
+
+          
+          <Box sx={{border:'1px solid white',display:{md:'none'}}}>
+             <input type="text" name="" value={input} onChange={(e)=>setinput(e.target.value)} style={{padding:'10px',backgroundColor:"",borderRadius:'0px'}}/>
+             <Button type="" onClick={()=>submit(input)} variant=''>
+              
+           <SearchIcon/>
+             </Button>
+             </Box>
+
+
 
        
          <NavLink to='CartPage'  >
@@ -238,6 +243,7 @@ const cartCount=products.length
 
         </Toolbar>
       </AppBar>
+
       <Box component="nav">
         <Drawer
           container={container}

@@ -109,7 +109,13 @@ function App() {
                 <Route path={item}  element={<CategoryPage/>} ></Route>
               ))
             }
-             <Route path='CategoryList'  element={<CategoryList/>}     />
+             <Route path='CategoryList'  element={<CategoryList/>}>
+             {
+              ListItems.map((item)=>(
+                <Route path={item}  element={<CategoryPage/>} ></Route>
+              ))
+            }
+             </Route>
         </Routes>
     
        
